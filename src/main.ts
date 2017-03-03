@@ -1,8 +1,8 @@
 import {enableProdMode} from '@angular/core';
 import {platformBrowserDynamic} from '@angular/platform-browser-dynamic';
 
-import {AppModule} from './app/app.module';
 import {environment} from './environments/environment';
+import {AppModule} from './modules/app/module';
 
 if (environment.production) {
   enableProdMode();
@@ -15,7 +15,7 @@ function start() {
     return document.addEventListener('deviceready', bootstrap);
   }
 
-  window.addEventListener('deviceready', bootstrap);
+  window.addEventListener('load', bootstrap);
 }
 
 start();
