@@ -23,4 +23,8 @@ export class SlideoutMenuService {
   public toggle() {
     this._slideout.toggle();
   }
+
+  public close() {
+    this._slideout.close();
+  }
 }

@@ -9,6 +9,8 @@ import {HomeComponent} from './components/home/home';
 import {SlideoutMenuService} from './services/slideoutMenuService';
 import {FooterComponent} from './components/footer/footer';
 import {ProfileComponent} from './components/profile/profile';
+import {PlatformService} from './services/platformService';
+import {CloseMenuOnMobileDirective} from './directives/closeMenuOnMobileDirective';
 
 @NgModule({
   imports: [
@@ -21,11 +23,13 @@ import {ProfileComponent} from './components/profile/profile';
     SidebarComponent,
     HomeComponent,
     FooterComponent,
-    ProfileComponent
+    ProfileComponent,
+    CloseMenuOnMobileDirective
   ],
   bootstrap: [RootComponent],
   providers: [
-    SlideoutMenuService
+    SlideoutMenuService,
+    PlatformService
   ]
 })
 export class AppModule {
