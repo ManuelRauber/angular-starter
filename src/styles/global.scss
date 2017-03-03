@@ -1,0 +1,36 @@
+@import 'tt-theme';
+@import '~bootstrap/scss/bootstrap';
+
+body {
+  -webkit-overflow-scrolling: touch;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  padding-top: $header-height;
+  padding-bottom: $footer-height;
+
+  will-change: margin-left;
+  transition: margin-left $sidebar-transition-duration $sidebar-easing;
+
+  @include media-breakpoint-up(md) {
+    margin-left: $sidebar-width;
+  }
+}
+
+// Slideout.js integration
+@include media-breakpoint-down(sm) {
+  app-sidebar {
+    overflow-y: scroll;
+    display: none;
+  }
+
+  .slideout-open .slideout-menu {
+    display: block;
+  }
+
+  .slideout-open,
+  .slideout-open body,
+  .slideout-open .slideout-panel {
+    overflow: hidden;
+  }
+}

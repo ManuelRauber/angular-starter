@@ -1,0 +1,23 @@
+@import '../../../../styles/utilities';
+
+:host {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.main {
+  padding: 25px;
+  z-index: 100;
+  flex: 1;
+  background-color: white;
+
+  transition: $sidebar-transition;
+  will-change: transform;
+}
+
+@include media-breakpoint-up(md) {
+  .main {
+    transform: none !important;
+  }
+}

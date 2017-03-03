@@ -1,0 +1,42 @@
+@import '../../../../styles/utilities';
+
+:host {
+  position: fixed;
+  top: $header-height;
+  bottom: 0;
+  left: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-right: 1px solid #eee;
+  width: $sidebar-width;
+  padding: 0 0 20px;
+
+  .nav {
+    margin-bottom: 20px;
+
+    .header {
+      padding: 0.5em 1em;
+      color: white;
+      font-size: 12px;
+      background-color: lighten(#292b2c, 60%);
+    }
+  }
+
+  .nav-item {
+    width: 100%;
+
+    + .nav-item {
+      margin-left: 0;
+    }
+  }
+
+  .nav-link {
+    border-radius: 0;
+  }
+
+  .app-title {
+    text-align: center;
+    padding-bottom: 20px;
+    padding-top: 20px;
+  }
+}
