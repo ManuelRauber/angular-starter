@@ -1,6 +1,7 @@
 import {Routes} from '@angular/router';
 import {HomeComponent} from './components/home/home';
 import {ProfileComponent} from './components/profile/profile';
+import {IsAuthenticated} from '../security/guards/isAuthenticated';
 
 export const ROUTES: Routes = [
   {
@@ -14,6 +15,7 @@ export const ROUTES: Routes = [
   },
   {
     path: 'profile',
-    component: ProfileComponent
+    component: ProfileComponent,
+    canActivate: [IsAuthenticated]
   }
 ];

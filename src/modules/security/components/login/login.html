@@ -1,0 +1,19 @@
+<div class="card">
+  <div class="card-header">
+    Login
+  </div>
+  <div class="card-block">
+    <form role="form" (ngSubmit)="submit()" #loginForm="ngForm">
+      <div class="form-group">
+        <label for="username">Username</label>
+        <input type="text" class="form-control" id="username" placeholder="Please provide your username..." required [(ngModel)]="username" name="username">
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" class="form-control" id="password" placeholder="Please provide your passsword..." required [(ngModel)]="password" name="password">
+      </div>
+      <app-shared-spinner [delay]="0" [isRunning]="isLoggingIn"></app-shared-spinner>
+      <button [hidden]="isLoggingIn" type="submit" class="btn btn-primary" [disabled]="!loginForm.form.valid">Login</button>
+    </form>
+  </div>
+</div>
