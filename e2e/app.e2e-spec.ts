@@ -1,4 +1,4 @@
-import { AngularStarterPage } from './app.po';
+import {AngularStarterPage} from './app.po';
 
 describe('angular-starter App', () => {
   let page: AngularStarterPage;
