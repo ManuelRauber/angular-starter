@@ -8,6 +8,7 @@ import {SidebarComponent} from './components/sidebar/sidebar';
 import {HomeComponent} from './components/home/home';
 import {SlideoutMenuService} from './services/slideoutMenuService';
 import {FooterComponent} from './components/footer/footer';
+import {ProfileComponent} from './components/profile/profile';
 
 @NgModule({
   imports: [
@@ -19,7 +20,8 @@ import {FooterComponent} from './components/footer/footer';
     HeaderComponent,
     SidebarComponent,
     HomeComponent,
-    FooterComponent
+    FooterComponent,
+    ProfileComponent
   ],
   bootstrap: [RootComponent],
   providers: [
