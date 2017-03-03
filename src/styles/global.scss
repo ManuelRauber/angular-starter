@@ -18,6 +18,12 @@ body {
   }
 }
 
+body {
+  .bg-faded {
+    background-color: $background-color;
+  }
+}
+
 // Slideout.js integration
 @include media-breakpoint-down(sm) {
   app-sidebar {

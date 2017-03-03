@@ -1,0 +1,12 @@
+@import '../../../../styles/utilities';
+
+nav {
+  height: $header-height;
+  justify-content: center;
+
+  &.navbar {
+    button {
+      color: $background-color;
+    }
+  }
+}

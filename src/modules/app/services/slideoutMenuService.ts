@@ -19,4 +19,8 @@ export class SlideoutMenuService {
       padding: 230
     });
   }
+
+  public toggle() {
+    this._slideout.toggle();
+  }
 }
