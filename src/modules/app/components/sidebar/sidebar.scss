@@ -34,6 +34,16 @@
 
   .nav-link {
     border-radius: 0;
+    color: black;
+
+    &.active {
+      background-color: inherit;
+      box-shadow: 5px 0 0 0 $primary-color inset;
+    }
+
+    &:hover:not(.active) {
+      box-shadow: 5px 0 0 0 $alternative-background-color inset;
+    }
   }
 
   .app-title {
