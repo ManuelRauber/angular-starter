@@ -4,29 +4,52 @@
 
 body {
   -webkit-overflow-scrolling: touch;
+  user-select: none;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
   padding-top: $header-height;
-  padding-bottom: $footer-height;
+
+  @include media-breakpoint-down(xs) {
+    padding-bottom: $sidebar-width;
+  }
 
   will-change: margin-left;
   transition: margin-left $sidebar-transition-duration $sidebar-easing;
 
-  @include media-breakpoint-up(md) {
+  @include media-breakpoint-up(sm) {
     margin-left: $sidebar-width;
   }
-}
 
-body {
+  @include media-breakpoint-up(lg) {
+    margin-left: 0;
+  }
+
   .bg-faded {
     background-color: $background-color;
   }
+
+  &.menu-open {
+    app-menu {
+      transform: none !important;
+    }
+
+    .backdrop {
+      opacity: 0.75;
+    }
+  }
+
+  &.menu-transition {
+    app-menu {
+      transition: transform 0.3s ease-in;
+    }
+  }
 }
+/*
 
 // Slideout.js integration
 @include media-breakpoint-down(sm) {
-  app-sidebar {
+  app-menu {
     overflow-y: scroll;
     display: none;
   }
@@ -41,3 +64,4 @@ body {
     overflow: hidden;
   }
 }
+*/

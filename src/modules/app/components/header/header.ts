@@ -1,5 +1,4 @@
 import {Component} from '@angular/core';
-import {SlideoutMenuService} from '../../services/slideoutMenuService';
 
 @Component({
   selector: 'app-header',
@@ -7,10 +6,4 @@ import {SlideoutMenuService} from '../../services/slideoutMenuService';
   styleUrls: ['header.scss']
 })
 export class HeaderComponent {
-  constructor(private _slideoutMenuService: SlideoutMenuService) {
-  }
-
-  public toggleMenu() {
-    this._slideoutMenuService.toggle();
-  }
 }

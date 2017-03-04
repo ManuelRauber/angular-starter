@@ -8,6 +8,7 @@ import {PlatformService} from './services/platformService';
 import {DeviceFeaturesService} from './services/deviceFeaturesService';
 import {DeviceFeatures} from './models/deviceFeatures';
 import {SupportsTouchDirective} from './directives/supportsTouchDirective';
+import {WindowRef} from './services/windowRef';
 
 export function deviceFeaturesFactory(deviceFeaturesService: DeviceFeaturesService) {
   return deviceFeaturesService.detect();
@@ -31,6 +32,7 @@ export function deviceFeaturesFactory(deviceFeaturesService: DeviceFeaturesServi
   providers: [
     { provide: StorageService, useClass: LocalStorageService },
     PlatformService,
+    WindowRef,
     DeviceFeaturesService,
     { provide: DeviceFeatures, useFactory: deviceFeaturesFactory, deps: [DeviceFeaturesService] }
   ]

@@ -1,9 +1,7 @@
-<nav class="navbar navbar-toggleable-md navbar-inverse fixed-top bg-inverse">
-  <a class="hidden-sm-down navbar-brand" href="#"><strong>Angular</strong> Starter</a>
+<nav class="navbar navbar-inverse fixed-top bg-inverse">
+  <a class="navbar-brand" href="#"><strong>Angular</strong> Starter</a>
 
-  <button (click)="toggleMenu()"  class="navbar-toggler hidden-md-up" type="button">
-    <i class="fa fa-bars"></i>
-  </button>
+  <app-menu [isHeader]="true"></app-menu>
 
   <div class="ml-auto">
     <img src="assets/logo.svg" height="25px" />

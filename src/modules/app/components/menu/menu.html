@@ -1,0 +1,26 @@
+<nav>
+  <ul class="nav nav-pills flex-column">
+    <li class="nav-item dropdown" (click)="open(1)" [ngClass]="{'show': menuId === 1}">
+      <!--appSupportsTouch [routerLink]="['/home']" routerLinkActive="active" appCloseMenuOnMobile-->
+      <a class="nav-link">
+        <i class="fa fa-home"></i> <span>Home</span>
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Home 1</a>
+        <a class="dropdown-item" href="#">Home 2</a>
+        <a class="dropdown-item" href="#">Home 3</a>
+      </div>
+    </li>
+
+    <li class="nav-item dropdown" (click)="open(2)" [ngClass]="{'show': menuId === 2}">
+      <a class="nav-link">
+        <i class="fa fa-user"></i> <span>Profile</span>
+      </a>
+      <div class="dropdown-menu">
+        <a class="dropdown-item" href="#">Profile 1</a>
+        <a class="dropdown-item" href="#">Profile 2</a>
+        <a class="dropdown-item" href="#">Profile 3</a>
+      </div>
+    </li>
+  </ul>
+</nav>

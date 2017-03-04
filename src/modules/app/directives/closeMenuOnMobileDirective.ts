@@ -1,4 +1,4 @@
-import {SlideoutMenuService} from '../services/slideoutMenuService';
+import {MenuService} from '../services/menuService';
 import {Directive, HostListener} from '@angular/core';
 import {PlatformService} from '../../shared/services/platformService';
 
@@ -14,6 +14,6 @@ export class CloseMenuOnMobileDirective {
     }
   }
 
-  constructor(private _menuService: SlideoutMenuService, private _platformService: PlatformService) {
+  constructor(private _menuService: MenuService, private _platformService: PlatformService) {
   }
 }

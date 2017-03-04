@@ -11,13 +11,16 @@
   z-index: 100;
   flex: 1;
   background-color: rgb(236, 238, 239);
-
-  transition: $sidebar-transition;
-  will-change: transform;
 }
 
-@include media-breakpoint-up(md) {
-  .main {
-    transform: none !important;
-  }
+.backdrop {
+  position: fixed;
+  top: $header-height;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: black;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
 }
