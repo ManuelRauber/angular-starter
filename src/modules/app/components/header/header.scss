@@ -7,6 +7,8 @@ nav {
   &.navbar {
     button {
       color: $background-color;
+      outline: none;
+      cursor: pointer;
     }
   }
 }
