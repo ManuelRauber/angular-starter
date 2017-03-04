@@ -7,9 +7,11 @@
   left: 0;
   overflow-x: hidden;
   overflow-y: auto;
-  border-right: 1px solid #eee;
   width: $sidebar-width;
   padding: 0 0 20px;
+
+  border-right: 1px solid darken($background-color, 8%);
+  box-shadow: -1px 0 1px 0 white inset;
 
   .nav {
     margin-bottom: 20px;
