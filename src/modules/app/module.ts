@@ -9,7 +9,6 @@ import {HomeComponent} from './components/home/home';
 import {SlideoutMenuService} from './services/slideoutMenuService';
 import {FooterComponent} from './components/footer/footer';
 import {ProfileComponent} from './components/profile/profile';
-import {PlatformService} from './services/platformService';
 import {CloseMenuOnMobileDirective} from './directives/closeMenuOnMobileDirective';
 import {SharedModule} from '../shared/module';
 import {FormsModule} from '@angular/forms';
@@ -34,8 +33,7 @@ import {SecurityModule} from '../security/module';
   ],
   bootstrap: [RootComponent],
   providers: [
-    SlideoutMenuService,
-    PlatformService
+    SlideoutMenuService
   ]
 })
 export class AppModule {

@@ -41,7 +41,7 @@
       box-shadow: 5px 0 0 0 $primary-color inset;
     }
 
-    &:hover:not(.active) {
+    &.no-touch:hover:not(.active) {
       box-shadow: 5px 0 0 0 $alternative-background-color inset;
     }
   }

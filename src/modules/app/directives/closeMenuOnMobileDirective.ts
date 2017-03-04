@@ -1,6 +1,6 @@
 import {SlideoutMenuService} from '../services/slideoutMenuService';
 import {Directive, HostListener} from '@angular/core';
-import {PlatformService} from '../services/platformService';
+import {PlatformService} from '../../shared/services/platformService';
 
 @Directive({
   selector: '[appCloseMenuOnMobile]'

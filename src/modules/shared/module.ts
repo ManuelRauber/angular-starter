@@ -4,6 +4,14 @@ import {StorageService} from './services/storageService';
 import {HttpModule} from '@angular/http';
 import {RouterModule} from '@angular/router';
 import {SpinnerComponent} from './components/spinner/spinner';
+import {PlatformService} from './services/platformService';
+import {DeviceFeaturesService} from './services/deviceFeaturesService';
+import {DeviceFeatures} from './models/deviceFeatures';
+import {SupportsTouchDirective} from './directives/supportsTouchDirective';
+
+export function deviceFeaturesFactory(deviceFeaturesService: DeviceFeaturesService) {
+  return deviceFeaturesService.detect();
+}
 
 @NgModule({
   imports: [
@@ -13,13 +21,18 @@ import {SpinnerComponent} from './components/spinner/spinner';
   exports: [
     HttpModule,
     RouterModule,
-    SpinnerComponent
+    SpinnerComponent,
+    SupportsTouchDirective
   ],
   declarations: [
-    SpinnerComponent
+    SpinnerComponent,
+    SupportsTouchDirective
   ],
   providers: [
-    { provide: StorageService, useClass: LocalStorageService }
+    { provide: StorageService, useClass: LocalStorageService },
+    PlatformService,
+    DeviceFeaturesService,
+    { provide: DeviceFeatures, useFactory: deviceFeaturesFactory, deps: [DeviceFeaturesService] }
   ]
 })
 export class SharedModule {
