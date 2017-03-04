@@ -2,13 +2,15 @@
 
 nav {
   height: $header-height;
-  justify-content: center;
+  align-items: center;
+  flex-direction: row;
 
   &.navbar {
     button {
       color: $background-color;
       outline: none;
       cursor: pointer;
+      align-self: center;
     }
   }
 }
